@@ -19,7 +19,7 @@ public class BootstrapTester implements CommandLineRunner {
 		        new TransactionValidator(modelPath.toString());
 
 		Random rnd = new Random();
-		for (int i=0; i<100; i++) {
+		for (int i=0; i<10; i++) {
 	    float amount = 50f + rnd.nextFloat() * 300f;   // 50 → 350
 	    float country = rnd.nextBoolean() ? 1f : 0f;
 	    float merchant = rnd.nextBoolean() ? 1f : 0f;

@@ -10,9 +10,9 @@
     <relativePath /> <!-- lookup parent from repository -->
   </parent>
   <groupId>guru.bonacci</groupId>
-  <artifactId>llmml</artifactId>
+  <artifactId>llmagent</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>llmml</name>
+  <name>llmagent</name>
   <description>Demo project for Spring Boot</description>
   <url />
   <licenses>
@@ -32,19 +32,18 @@
     <spring-ai.version>1.1.2</spring-ai.version>
   </properties>
   <dependencies>
-
     <dependency>
       <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
+      <artifactId>spring-boot-starter-webflux</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.ai</groupId>
+      <artifactId>spring-ai-starter-mcp-client</artifactId>
     </dependency>
     <dependency>
       <groupId>org.springframework.ai</groupId>
-      <artifactId>spring-ai-starter-mcp-server-webmvc</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>ai.djl.onnxruntime</groupId>
-      <artifactId>onnxruntime-engine</artifactId>
-      <version>0.36.0</version>
+      <artifactId>spring-ai-starter-model-ollama</artifactId>
     </dependency>
 
     <dependency>

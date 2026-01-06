@@ -6,7 +6,9 @@ import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.stereotype.Component;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Component
 @RequiredArgsConstructor
 public class TransactionValidationTool {
@@ -20,5 +22,11 @@ public class TransactionValidationTool {
 		
 		// sorry - hack
 		return validator.isValidTransaction(amount, country, merchant);
+	}
+	
+	@Tool(name = "ping")
+	public String ping() { 
+		log.info("called");
+		return "pang"; 
 	}
 }
